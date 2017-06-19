@@ -373,8 +373,12 @@ font-size: 40px ;
 }
 .listing-content{
 text-align: center;
+	padding: 10px;
 }
+.listing-image{
+	width: 33%;
 
+}
 
 /* ------------------------------------------------------------------------------
 	 Services
