@@ -71,7 +71,7 @@ h5 {
 }
 
 a:focus,input{outline:none;}
-area, a, a img,input{blr:expression_r(this.onFocus=this.blur());}
+area, a, a img,input{blr:expression(this.onFocus=this.blur());}
 /* ------------------------------------------------------------------------------
 	 General Style
 -------------------------------------------------------------------------------*/
@@ -105,7 +105,7 @@ ul li {
 	padding: 0;
 }
 .padding-top{
-	padding-top: 200px
+	padding-top: 150px
 }
 
 .side-margin{
@@ -128,6 +128,9 @@ ul li {
 	color: #3498db;
 }
 
+.center{
+text-align: center;
+}
 
 /* ------------------------------------------------------------------------------
 	 Header & navigation
@@ -709,4 +712,16 @@ font-size: 40px ;
 .carousel-control {
 	opacity: 1;
 	text-shadow: none;
+}
+
+/* ------------------------------------------------------------------------------
+	 guide
+-------------------------------------------------------------------------------*/
+.guide{
+padding: 20px 0 20px 0;
+}
+.guide-heading{
+	padding: 50px 0 50px 0;
+	color: #3498db;
+	text-align: center;
 }
