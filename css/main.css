@@ -1,5 +1,5 @@
 
-@import url(http://fonts.googleapis.com/css?family=Open%20Sans:300,400,500,600,700);*/
+@import url(http://fonts.googleapis.com/css?family=Open%20Sans:300,400,500,600,700);
 
 /* ------------------------------------------------------------------------------
 	 Typography
@@ -77,8 +77,8 @@ area, a, a img,input{blr:expression_r(this.onFocus=this.blur());}
 -------------------------------------------------------------------------------*/
 a {
 	color: #6c7279;
-
 }
+
 a:hover, a:focus {
 	text-decoration: none;
 	-moz-transition: background-color, color, 0.3s;
@@ -104,6 +104,14 @@ ul li {
 .no-padding {
 	padding: 0;
 }
+.padding-top{
+	padding-top: 200px
+}
+
+.side-margin{
+	margin-left: 8%;
+	margin-right: 8%;
+}
 .no-gutter [class*=col-] {
 	padding-right: 0;
 	padding-left: 0;
@@ -114,6 +122,10 @@ ul li {
 	line-height:0;
 	font-size:0;
 	overflow:hidden;
+}
+
+.blue{
+	color: #3498db;
 }
 
 
