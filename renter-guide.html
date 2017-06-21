@@ -40,7 +40,7 @@
 
   <!-- Testlist Section --> 
   
-<section id="section" class="section test-list">
+<section id="section" class="section">
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-8 col-sm-8">
@@ -54,6 +54,38 @@
 
   </section>
 
+
+
+<!-- Neighbor Tab Section -->
+<section id="Neighbor-tab" class="section tab">
+	<p class="listing-feature">Exploring Neighborhoods</p>
+		<div id="tab" >
+	 		 	<div class="tabList">
+					<ul>
+						<li class="cur">French Concession </li>
+						<li>Chang Ning</li>
+						<li>Jing An</li>
+						<li>Huang Pu</li>
+					</ul>
+			  	</div>
+		  	<div class="tabCon">
+				<div class="cur">
+					<img src="images/portfolio/work-2.jpg" class="img-responsive  tab-image" alt="">
+			        <p>
+The French Concession, the former French colonial possession, is today a charming, historic district known for its European architecture and tree-lined streets, as well as its shopping, bars and cafes. Most of the action centers on the main east-west thoroughfare, Huaihai Road, an upscale shopping destination. You can also tour the area around Dongping Road, where dozens of the city's hottest bars are active nightly. Shopping in the area is a bit overpriced, but you'll find unique, one-of-a-kind items here that may be worth the money.</p>
+				</div>
+				<div>11111111</div>
+				<div>22222222222</div>
+				<div>33333333333</div>
+			</div>
+ 		</div>
+</section>
+<!-- Neighbor Tab Section -->
+
+
+
+
+
 </body>
 </html>
 
@@ -64,5 +96,39 @@
 <script src="js/retina.min.js"></script> 
 <script src="js/modernizr.js"></script> 
 <script src="js/main.js"></script>
+<script>
+window.onload = function() {
+    var oDiv = document.getElementById("tab");
+    var oLi = oDiv.getElementsByTagName("div")[0].getElementsByTagName("li");
+    var aCon = oDiv.getElementsByTagName("div")[1].getElementsByTagName("div");
+    var timer = null;
+    for (var i = 0; i < oLi.length; i++) {
+        oLi[i].index = i;
+        oLi[i].onclick = function() {
+            show(this.index);
+        }
+    }
+    function show(a) {
+        index = a;
+        var alpha = 0;
+        for (var j = 0; j < oLi.length; j++) {
+            oLi[j].className = "";
+            aCon[j].className = "";
+            aCon[j].style.opacity = 0;
+            aCon[j].style.filter = "alpha(opacity=0)";
+        }
+        oLi[index].className = "cur";
+        clearInterval(timer);
+        timer = setInterval(function() {
+            alpha += 2;
+            alpha > 100 && (alpha = 100);
+            aCon[index].style.opacity = alpha / 100;
+            aCon[index].style.filter = "alpha(opacity=" + alpha + ")";
+            alpha == 100 && clearInterval(timer);
+        },
+        5)
+    }
+}
+</script>
 </body>
 </html>
