@@ -28,8 +28,6 @@ h4 {
 	color: #2d3033;
 	font-weight: 400;
 }
-
-
 h5 {
 	font-size: 14px;
 	color: #2d3033;
@@ -106,16 +104,6 @@ ul li {
 .no-padding {
 	padding: 0;
 }
-
-.padding-top{
-	padding-top: 200px
-}
-
-.side-margin{
-	margin-left: 8%;
-	margin-right: 8%;
-}
-
 .no-gutter [class*=col-] {
 	padding-right: 0;
 	padding-left: 0;
@@ -126,10 +114,6 @@ ul li {
 	line-height:0;
 	font-size:0;
 	overflow:hidden;
-}
-
-.blue{
-	color: #3498db;
 }
 
 
@@ -450,7 +434,6 @@ font-size: 40px ;
 	width: 94%;
 	margin: auto;
 }
-
 
 .guide h4{
 	text-align: center;
