@@ -89,6 +89,24 @@ h5 {
 	border: 2px solid #3498db;
 }
 
+
+.btn-head {
+	margin:auto;
+	padding: 5px 10px 5px 10px;
+	background-color: #3498db;
+	color: white;
+	border: 1px solid #3498db;
+	border-radius: 4px;
+	-webkit-transition-duration: 0.4s; /* Safari */
+	transition-duration: 0.4s;
+}
+.btn-head:hover{
+	background-color:white;
+	color: #3498db;
+	border: 1px solid #3498db;
+}
+
+
 a:focus,input{outline:none;}
 area, a, a img,input{blr:expression(this.onFocus=this.blur());}
 /* ------------------------------------------------------------------------------

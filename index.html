@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/login-register.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="shortcut icon" href="images/logo/favicon.ico">
 </head>
@@ -31,9 +32,11 @@
           <li><a href="renter-guide.html">Renter Guide</a></li>
           <li><a href="search.html">Find Apartments</a></li>
           <li><a href="contact.html">Contact</a></li>
+          <li><a href="javascript:void(0)" onclick="openLoginModal();"><button class="btn-head">Sign In/Register</button></a></li>
         </ul>
       </nav>
-      <a href="#" class="nav-toggle">Menu<span></span></a> </div>
+      <a href="#" class="nav-toggle">Menu<span></span></a>
+    </div>
   </header>
 </section>
 <!-- Navigation Section -->
@@ -76,7 +79,7 @@
     </div>
   </div>
   <div class="listing-btn">
-  	  <button class="btn-outline"> Explore More</button>
+  	  <a href="search.html"><button class="btn-outline"> Explore More</button></a>
   </div>
 </section>
 <!-- Feature Listing Section -->
@@ -164,7 +167,7 @@
   <p>Do you need an agent? How can you find a no-fee apartment? How do you prepare for a showing? <br>
   	Our Renter Guide will prepare you for the hunt with tips, facts, checklists, forms and infographics.</p>
   <div class="guide-btn">
-  	  <button class="btn-guide"> Read the Guide</button>
+    <a href="renter-guide.html"><button class="btn-guide"> Read the Guide</button></a>
   </div>
 </section>
 <!-- renter guide Section -->
@@ -278,7 +281,63 @@
     </div>
   </div>
 </footer>
-<!-- footer section --> 
+<!-- footer section -->
+
+
+<!-- hide log-in section -->
+<div class="modal fade login" id="loginModal">
+  <div class="modal-dialog login animated">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">Welcome</h4>
+      </div>
+      <div class="modal-body">
+        <div class="box">
+          <div class="content">
+            <div class="division">
+              <div class="line l"></div>
+              <div class="line r"></div>
+            </div>
+            <div class="error"></div>
+            <div class="form loginBox">
+              <form method="post" action="/login" accept-charset="UTF-8">
+                <input id="email-login" class="form-control" type="text" placeholder="Email" name="email">
+                <input id="password-login" class="form-control" type="password" placeholder="Password" name="password">
+                <input class="btn btn-default btn-login" type="button" value="Login" onclick="loginAjax()">
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <div class="content registerBox" style="display:none;">
+            <div class="form">
+              <form method="post" html="{:multipart=>true}" data-remote="true" action="/register" accept-charset="UTF-8">
+                <input id="email" class="form-control" type="text" placeholder="Email" name="email">
+                <input id="password" class="form-control" type="password" placeholder="Password" name="password">
+                <input id="password_confirmation" class="form-control" type="password" placeholder="Repeat Password" name="password_confirmation">
+                <input class="btn btn-default btn-register" type="submit" value="Create account" name="commit">
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <div class="forgot login-footer">
+          <span><a href="#header" class="forgot-left">Forget password</a></span><br>
+                            <span>Looking to
+                                 <a class="blue" href="javascript: showRegisterForm();">create an account</a>
+                            ?</span>
+        </div>
+        <div class="forgot register-footer" style="display:none">
+          <span>Already have an account?</span>
+          <a class="blue" href="javascript: showLoginForm();">Login</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 <!-- JS FILES --> 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> 
@@ -287,5 +346,6 @@
 <script src="js/retina.min.js"></script> 
 <script src="js/modernizr.js"></script> 
 <script src="js/main.js"></script>
+<script src="js/login-register.js"></script>
 </body>
 </html>
