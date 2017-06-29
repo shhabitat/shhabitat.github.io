@@ -373,9 +373,6 @@ text-align: center;
 	-webkit-transform: translateY(0) rotate(-45deg);
 	transform: translateY(0) rotate(-45deg);
 }
-/* ------------------------------------------------------------------------------
-	 Header Slider
--------------------------------------------------------------------------------*/
 
 /* ------------------------------------------------------------------------------
 	 Welcome
@@ -383,7 +380,7 @@ text-align: center;
 .welcome {
 	width: 94%;
 	margin: auto;
-	padding: 12% 3% 4% 2%;
+	padding: 15% 3% 4% 2%;
 }
 
 .welcome-color{
@@ -419,7 +416,10 @@ font-size: 40px ;
 	padding-top: 70px;
 	cursor:pointer;
 }
+.listing-image{
+	width: auto;
 
+}
 
 /* ------------------------------------------------------------------------------
 	 Portfolio
