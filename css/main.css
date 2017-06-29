@@ -770,9 +770,25 @@ font-size: 40px ;
 }
 
 .guide-heading{
-	padding: 40px 0 40px 0;
+	padding: 50px 0 50px 0;
 	color: #2980B9;
 	text-align: center;
+	text-transform: capitalize;
+	font-weight: 600;
+}
+
+.guide-subheading{
+	padding: 10px 0 10px 0;
+	color: #2980B9;
+	text-align: center;
+	text-transform: capitalize;
+	font-size: 20px;
+}
+
+.renter-guide h5{
+	font-weight:500;
+	text-transform: capitalize;
+	color: #2980B9;
 }
 
 .guide-bkg{
