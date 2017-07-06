@@ -770,6 +770,10 @@ font-size: 40px ;
 		margin-right:3%;
 }
 
+.guide-img{
+	width: 200px;
+}
+
 .guide-heading{
 	padding: 50px 0 50px 0;
 	color: #2980B9;
